@@ -20,9 +20,9 @@ def add_new_shopping_list(shopping_dict, store_name):
     Returns:
       None
     """
+    shopping_dict[store_name] = []
 
     # your code here!
-    pass
 
 
 def remove_shopping_list(shopping_dict, store_to_remove):
@@ -38,8 +38,7 @@ def remove_shopping_list(shopping_dict, store_to_remove):
       None
     """
 
-    # your code here!
-    pass
+    del shopping_dict[store_to_remove]
 
 
 def add_to_shopping_list(shopping_dict, list_name, items):
@@ -88,8 +87,12 @@ def display_shopping_list(shopping_dict, list_name):
       None
     """
 
-    # your code here!
-    pass
+    for item in shopping_dict[list_name]:
+        if list_name == shopping_dict[list_name]:
+            print item
+        else:
+            print "This {} list does not exist.".format(list_name)
+
 
 
 def show_all_lists(shopping_dict):
